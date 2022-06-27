@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.panel {
+    background-color: rgb(41, 41, 41);
+    box-shadow: 5px 5px 15px rgb(31, 30, 30);
+    border-radius: 20px;
+    width: 350px; 
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+
+    .goBack {
+        margin-top: 10px;
+    }
+
+    a {
+        color: rgb(163, 163, 163);
+        text-decoration: underline;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+}
