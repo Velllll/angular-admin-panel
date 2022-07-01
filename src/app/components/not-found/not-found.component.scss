@@ -11,8 +11,12 @@
     border-radius: 20px;
     width: 350px; 
     color: rgb(255, 255, 255);
-    text-align: center;
     padding: 20px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     .goBack {
         margin-top: 10px;
