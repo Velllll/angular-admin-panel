@@ -1,1 +1,32 @@
-<p>contacts-details works!</p>
+<div class="wrapper">
+    <h5>User details</h5>
+
+    <div class="info">
+        <app-loader [loading]="loader"></app-loader>
+        <div *ngIf="user | async as user">
+            <div class="name">Name: {{user.name}}</div>
+            <div class="email">Email: {{user.email}}</div>
+            <div class="phone">Phone:{{user.phone}}</div>
+            <div class="username">User name: {{user.username}}</div>
+            <br>
+            <div class="address">
+                <h6>Address</h6>
+
+                <div class="cityInfo">
+                    City: {{user.address?.city}}
+                </div>
+                <div class="street">
+                    Street: {{user.address?.street}}
+                </div>
+                <div class="zipcode">
+                    Zipcode: {{user.address?.zipcode}}
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <button [routerLink]="['../../']">go back</button>
+
+</div>

@@ -1,4 +1,7 @@
+import { IUser } from './../../interfaces/User.interface';
+import { Observable, of } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../../services/admin.service';
 
 @Component({
   selector: 'app-contacts',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
 
-  constructor() { }
+  personList!: Observable<IUser[]>
+
+  isLoading = true
+  constructor(private adminService: AdminService) { }
 
   ngOnInit(): void {
+    this.personList = this.adminService.getPersonalList()
+    this.personList.subscribe({
+      next: value => this.isLoading = false
+    })
   }
 
 }

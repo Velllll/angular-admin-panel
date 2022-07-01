@@ -1,1 +1,17 @@
-<p>contacts works!</p>
+<div *ngIf="isLoading" class="loader">
+    <app-loader [loading]="isLoading"></app-loader>
+</div>
+<div 
+class="card"
+*ngFor="let user of personList | async">
+    <div class="cardBody">
+        <div class="info">
+            <div class="name">{{user.name}}</div>
+            <div class="email">{{user.email}}</div>
+        </div>
+        <div class="btn">
+            <button [routerLink]="['user', user.id]">Details</button>
+        </div>
+
+    </div>
+</div>

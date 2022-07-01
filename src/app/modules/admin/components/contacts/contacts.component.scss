@@ -1,0 +1,48 @@
+.loader {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    background-color: rgb(41, 41, 41);
+    width: 140px;
+    height: 160px;
+    margin: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+    .info {
+        height: 80px;
+
+        .name {
+            text-align: center;
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+
+        .email {
+            margin-top: 20px;
+            padding: 0 10px;
+        }
+    }
+
+    .btn {
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        button {
+            padding: 0 10px;
+            font-size: 17px;
+            line-height: 25px;
+            height: 25px;
+            border-radius: 10px;
+        }
+    }
+}
+
+
